@@ -11,34 +11,34 @@ Router.onRouteChangeStart = url => {
 }
 
 Router.onRouteChangeComplete = () => NProgress.done();
-Router.onRouteChangeError = () =>NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
-export default (props)=>(
+export default (props) => (
 
     <div className="root">
 
-    <Head>
-    {
-        //just like an html head tag
-    }
+        <Head>
+            {
+                //just like an html head tag
+            }
 
-    <title>NextPortfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"/>
-    </Head>
-    <header>
-    
-    <Link href="/"><a>Home</a></Link>
-    <Link href="/about"><a>About</a></Link>
-    <Link href="/hireme"><a>HireMe</a></Link>
-    </header>
+            <title>NextPortfolio</title>
+        </Head>
+        <header>
 
-    <h1>{props.title}</h1>
-    {props.children} 
-   
+            <Link href="/"><a>Home</a></Link>
+            <Link href="/about"><a>About</a></Link>
+            <Link href="/hireme"><a>HireMe</a></Link>
+            <Link href="/blog"><a>Blog</a></Link>
+        </header>
 
-    <footer>&copy;{new Date().getFullYear()}</footer>
-    <style jsx>{
-        `
+        <h1>{props.title}</h1>
+        {props.children}
+
+
+        <footer>&copy;{new Date().getFullYear()}</footer>
+        <style jsx>{
+            `
         .root {
 
             display: flex;
@@ -73,12 +73,12 @@ export default (props)=>(
         }
 
         `
-    }</style>
+        }</style>
 
 
-    <style global jsx>
-    {
-        `
+        <style global jsx>
+            {
+                `
         body {
             margin: 0;
             font-size: 110%;
@@ -86,9 +86,9 @@ export default (props)=>(
         }
         
         `
-    }
-    
-    </style>
+            }
+
+        </style>
     </div>
 
 )
