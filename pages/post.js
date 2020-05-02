@@ -1,9 +1,9 @@
 import Layout from '../components/Layout';
+import {withRouter} from 'next/router';
 
+const Post = ({router})=>(
 
-const Post = (props)=>(
-
-    <Layout title={props.url.query.title}>
+    <Layout title={router.query.title}>
     
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -19,4 +19,4 @@ const Post = (props)=>(
 
 )
 
-export default Post;
+export default withRouter(Post);
